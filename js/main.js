@@ -1,3 +1,12 @@
+//言語
+$(function(){
+  var lang = window.navigator.language;
+  if(lang === `ja`){
+    $('.lang_en').remove();
+  }else{
+    $('.lang_ja').remove();
+  }
+});
 //タイマー
 $(function() {
 	var timer = false;
@@ -153,18 +162,8 @@ $(function() {
 	$('#menubar li:has(i)').addClass('inline');
 });
 
-
 //h2の中に下線用のスタイルを作る
 $(function() {
 	$('main h2').wrapInner('<span class="uline">');
 });
 
-//言語
-$(function(){
-  var lang = window.navigator.language;
-  if(lang === `ja-JP`){
-    $('.lang_en').remove();
-  }else{
-    $('.lang_ja').remove();
-  }
-});
